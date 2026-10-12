@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 // For GitHub Pages, set NEXT_PUBLIC_BASE_PATH=/emma-birthday if needed.
 // With Next.js basePath configured, keep this empty to avoid a double prefix.
-const BASE = process.env.GITHUB_PAGES === "true" ? "/emma-birthday" : "";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const EVENT_TIME = new Date("2026-10-24T15:00:00-06:00").getTime();
 const MAPS_URL =
   "https://www.google.com/maps/place/Av.+del+Bronce+20,+El+Fort%C3%ADn,+45066+Zapopan,+Jal./@20.62408,-103.4689086,17z/data=!3m1!4b1!4m6!3m5!1s0x8428ab96d60f1689:0x2d03255d2dc1c1e4!8m2!3d20.62408!4d-103.4689086!16s%2Fg%2F11zcnjsrp3?entry=ttu&g_ep=EgoyMDI2MTAwNi4wIKXMDSoASAFQAw%3D%3D";
