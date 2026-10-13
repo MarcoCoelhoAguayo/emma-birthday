@@ -12,7 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://marcocoelhoaguayo.github.io/emma-birthday/";
+
+const ogImage = `${siteUrl}og-emma.jpg`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Cumpleaños de Emma | 4 años",
   description: "Estás invitado a celebrar los 4 años de Emma.",
   openGraph: {
@@ -22,14 +27,20 @@ export const metadata: Metadata = {
     siteName: "Invitación de Emma",
     images: [
       {
-        url: "https://tu-dominio.com/og-emma.jpg",
+        url: "ogImage",
         width: 1200,
         height: 630,
         alt: "Invitación de cumpleaños de Emma",
+        type: "image/jpeg",
       },
     ],
     locale: "es_MX",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: [ogImage],
   },
 };
 
