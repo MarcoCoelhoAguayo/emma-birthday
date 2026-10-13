@@ -18,19 +18,21 @@ const ogImage = `${siteUrl}og-emma.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Cumpleaños de Emma | 4 años",
-  description: "Estás invitado a celebrar los 4 años de Emma.",
+
+  title: "🎀 ¡Emma cumple 4 años!",
+  description: "¡Estás invitado a celebrar los 4 añitos de Emma! 🐱✨",
+
   openGraph: {
-    title: "¡Emma cumple 4 años!",
-    description: "Acompáñanos a celebrar su cumpleaños.",
-    url: "https://tu-dominio.com",
-    siteName: "Invitación de Emma",
+    title: "🎉 ¡Emma cumple 4 años!",
+    description: "¡Acompáñanos a celebrar un día mágico!",
+    url: siteUrl,
+    siteName: "Cumpleaños de Emma",
     images: [
       {
-        url: "ogImage",
+        url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Invitación de cumpleaños de Emma",
+        alt: "Invitación al cumpleaños de Emma",
         type: "image/jpeg",
       },
     ],
@@ -40,6 +42,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+    title: "¡Emma cumple 4 años!",
     images: [ogImage],
   },
 };
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
